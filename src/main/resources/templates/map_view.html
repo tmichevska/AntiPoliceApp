@@ -1,0 +1,9 @@
+<th:block>
+    <div id="box">
+        <div id="osm-map" class="leaflet-container" style="position: absolute;height: 80%;width: 95%;"></div>
+    </div>
+    <input type="hidden" id="filter" th:value="${filter !=null ? filter:''}">
+    <script>
+        mapView();
+    </script>
+</th:block>
