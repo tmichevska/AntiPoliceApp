@@ -21,3 +21,31 @@ public class AntiPoliceApplication {
     }
 
 }
+
+
+/*
+
+*ENTITETI*
+-3 glavni entiteti
+-2 pomoshni entiteti (converter za Latitude and Longitude)
+
+
+*RELACII*
+-2 relacii ManyToOne
+-1 relacija OneToOne
+-Nitu edna ManyToMany
+
+
+
+*TEHNOLOGII*
+-jQuery
+-Rest Api
+-Leaflet JS
+-Thymeleaf (HTML)
+-CSS
+-Spring JPA
+-Spring Security
+-MySql Database
+-Cron / cron job (za avtomatsko izvrshuvanje na akcii na odreden vremenski interval)
+
+ */

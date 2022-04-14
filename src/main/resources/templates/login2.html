@@ -1,0 +1,37 @@
+<th:block>
+    <form th:method="POST" th:action="@{/login}" style="margin-top: 7.5%;">
+        <div class="container d-flex justify-content-center">
+            <div class="row w-50 p-3" style="background-color:#25393f; border:2px solid gray;border-radius: 20px;">
+                <div class="col col-12 text-center d-flex justify-content-center">
+                    <h1 style="color: whitesmoke;">Login</h1>
+                </div>
+                <div class="col col-12 text-center d-flex justify-content-center">
+                    <p class="text-center" style="color: whitesmoke;">Please enter your login username and password.</p>
+                </div>
+                <block class="col col-12 text-center" th:if="${hasError}">
+                    <p class="text-danger" th:text="${error}"></p>
+                </block>
+                </br>
+                <div class="col col-12 d-flex flex-column text-center align-items-center">
+                    <h6 style="color: whitesmoke;">Username</h6>
+                    <input type="text" name="username" style="text-align: center;border:1px solid deepskyblue;"
+                           class="w-75 form-rounded form-control rounded required"
+                           placeholder="Username..."/>
+                </div>
+                <div class="col col-12 d-flex flex-column  text-center align-items-center">
+                    <h6 style="color: whitesmoke;">Password</h6>
+                    <input type="password" name="password" style="text-align: center;border:1px solid deepskyblue;"
+                           class="w-75 form-rounded form-control rounded required"
+                           placeholder="Password..."/>
+                </div>
+
+                <div class="col col-12 mt-3 d-flex justify-content-center justify-content-around">
+                    <button type="submit" class="btn btn-primary" style="background-color:deepskyblue;">Log in</button>
+                </div>
+                <div class="col col-12 mt-3 d-flex justify-content-end">
+                    <a href="/register">You do not have an account?</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</th:block>

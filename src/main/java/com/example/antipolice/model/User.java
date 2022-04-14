@@ -23,6 +23,8 @@ public class User implements UserDetails {
 
     int age;
 
+
+
     @Enumerated(value = EnumType.STRING)
     private UserType type;
 
