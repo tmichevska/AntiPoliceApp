@@ -43,6 +43,7 @@ public class AntiPoliceApplication {
 -Leaflet JS
 -Thymeleaf (HTML)
 -CSS
+-Bootstrap
 -Spring JPA
 -Spring Security
 -MySql Database
