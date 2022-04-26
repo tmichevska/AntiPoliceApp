@@ -1,21 +1,29 @@
+
 <th:block>
     <div id="box">
-        <div id="osm-map" class="leaflet-container" style="position: absolute;height: 75%;width: 70%;"></div>
+        <div id="osm-map" class="leaflet-container" style="position: absolute;height: 75%;width: 75%;"></div>
+
         <div>
             <form th:action="@{/anti-police/new_location}" th:method="POST" style="float: right; color: #9d9d9d;">
-                <label for="cord">Current coordinates</label>
+
                 <th:block>
                     <p class="text-danger" th:if="${errorMessage}">Please click on the map to get the coordinates!</p>
                 </th:block>
-                <input type="text" readonly th:name="cord" style="color:brown;" id="cord">
-                <div>
-                    <input type="radio" th:if="${policeStates}"
+                <br/>
+
+                <div class="form-group">
+                    <label for="cord">Current coordinates</label>
+                    <input type="text" th:name="cord" class="form-control" id="cord" readonly>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" th:if="${policeStates}"
                            th:each="state : ${policeStates}"
                            th:name="state"
                            th:value="${state}"
-                           th:text="${state.name()}" required>
+                           th:text="${state.name()}" required style="display:block">
                 </div>
-                <input type="submit" value="Submit">
+                <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
             </form>
         </div>
     </div>
@@ -26,3 +34,4 @@
 
 
 </th:block>
+
