@@ -18,6 +18,13 @@ public class LocationRating {
     @OneToOne
     MapCoordinates mapCoordinates;
 
+    Integer likes;
+
+    Integer dislikes;
+
+    @Enumerated
+    RatingStatus status;
+
     public LocationRating()
     {
 
@@ -27,5 +34,8 @@ public class LocationRating {
         this.id = id;
         this.user = user;
         this.mapCoordinates = mapCoordinates;
+        this.likes=0;
+        this.dislikes=0;
+        this.status = RatingStatus.REAL;
     }
 }

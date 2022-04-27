@@ -74,7 +74,7 @@ function mapView() {
                 if(ourData[i].user != null && ourData[i].state != null) {
                     marker.bindPopup('<p>Type of police: ' + ourData[i].state + ' </p>' +
                         '<p>From user: ' + ourData[i].user.username + ' </p>' +
-                        '<p>DateTime: ' + ourData[i].formattedDateTime);
+                        '<p>DateTime: ' + ourData[i].formattedDateTime + ' </p>');
                 }
             }
 
